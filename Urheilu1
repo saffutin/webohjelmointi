@@ -1,0 +1,53 @@
+// Yliluokka Henkilo
+class Henkilo {
+  constructor(etunimet, sukunimi, kutsumanimi, syntymavuosi) {
+    this.etunimet = etunimet;
+    this.sukunimi = sukunimi;
+    this.kutsumanimi = kutsumanimi;
+    this.syntymavuosi = syntymavuosi;
+  }
+}
+
+// Aliluokka Urheilija perii Henkilo-luokan
+class Urheilija extends Henkilo {
+  constructor(etunimet, sukunimi, kutsumanimi, syntymavuosi, linkkiKuvaan, omapaino, laji, saavutukset) {
+    super(etunimet, sukunimi, kutsumanimi, syntymavuosi);
+    this.linkkiKuvaan = linkkiKuvaan;
+    this.omapaino = omapaino;
+    this.laji = laji;
+    this.saavutukset = saavutukset;
+  }
+}
+
+// Esimerkkejä Urheilija-olioista
+const urheilija1 = new Urheilija("Matti", "Meikäläinen", "Masa", 1990, "kuva.jpg", 80, "Juoksu", ["Kultamitali 100m", "Hopeamitali 200m"]);
+const urheilija2 = new Urheilija("Anna", "Urheilija", "Ansku", 1985, "kuva2.jpg", 70, "Uinti", ["Hopeamitali 200m vapaauinti"]);
+const urheilija3 = new Urheilija("Jari", "Juoksija", "Jare", 1982, "kuva3.jpg", 75, "Juoksu", ["Kultamitali maraton"]);
+
+// Tulostetaan Urheilija-olioiden tiedot
+console.log("Urheilija 1:");
+console.log("Nimi:", urheilija1.getEtunimet(), urheilija1.getSukunimi());
+console.log("Kutsumanimi:", urheilija1.getKutsumanimi());
+console.log("Syntymävuosi:", urheilija1.getSyntymavuosi());
+console.log("Kuva:", urheilija1.getLinkkiKuvaan());
+console.log("Omapaino:", urheilija1.getOmaPaino());
+console.log("Laji:", urheilija1.getLaji());
+console.log("Saavutukset:", urheilija1.getSaavutukset());
+
+console.log("\nUrheilija 2:");
+console.log("Nimi:", urheilija2.getEtunimet(), urheilija2.getSukunimi());
+console.log("Kutsumanimi:", urheilija2.getKutsumanimi());
+console.log("Syntymävuosi:", urheilija2.getSyntymavuosi());
+console.log("Kuva:", urheilija2.getLinkkiKuvaan());
+console.log("Omapaino:", urheilija2.getOmaPaino());
+console.log("Laji:", urheilija2.getLaji());
+console.log("Saavutukset:", urheilija2.getSaavutukset());
+
+console.log("\nUrheilija 3:");
+console.log("Nimi:", urheilija3.getEtunimet(), urheilija3.getSukunimi());
+console.log("Kutsumanimi:", urheilija3.getKutsumanimi());
+console.log("Syntymävuosi:", urheilija3.getSyntymavuosi());
+console.log("Kuva:", urheilija3.getLinkkiKuvaan());
+console.log("Omapaino:", urheilija3.getOmaPaino());
+console.log("Laji:", urheilija3.getLaji());
+console.log("Saavutukset:", urheilija3.getSaavutukset());
